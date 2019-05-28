@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>PHP for WordPress</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-</head>
-<body>
-
-  <header id="masthead">
-    <h1><a href="#">PHP for WordPress</a></h1>
-  </header>
-
+<?php get_header(); ?>
   <div id="content">
 
 <!-- Add any template tags outside of loop -->
@@ -20,8 +7,25 @@
 
       <!-- Add any post template tags inside of loop -->
 
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
+      <article <?php post_class(); ?>>
+        <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+        <footer>
+          <p class="byline">
+            Author:
+            <a href="<?php echo get_author_posts_url( $post->post_author ); ?>">
+              <?php the_author(); ?>
+            </a> |
+            Date:
+            <?php the_time('Y年n月j日'); ?> |
+            Category:
+            <?php the_category( ', ' ); ?> |
+            Tags:
+            <?php the_tags('', ', ', ''); ?> |
+          </p>
+
+        </footer>
+      </article>
 
     <?php endwhile; else: ?>
 
@@ -34,5 +38,4 @@
 
   </div>
 
-</body>
-</html>
+<?php get_footer(); ?>
