@@ -27,6 +27,9 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'my-demo-starter' ), 'my-demo-starter', '<a href="https://tsuyopon.xyz/">tsuyoshi</a>' );
 				?>
 		</div><!-- .site-info -->
+		<div class="custom-footer">
+			<?php esc_html_e( 'Custom footer text', 'my-demo-starter' ); ?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
