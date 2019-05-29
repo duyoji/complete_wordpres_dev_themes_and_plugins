@@ -13,6 +13,7 @@ services:
       - '3306:3306'
     volumes:
       - ./db/mysql_data:/var/lib/mysql
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
 
 
   wordpress:
