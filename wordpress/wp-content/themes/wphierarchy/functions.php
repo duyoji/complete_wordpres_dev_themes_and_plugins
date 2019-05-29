@@ -10,6 +10,8 @@ if (!function_exists('wphierarchy_setup')) :
    */
   function wphierarchy_setup()
   {
+    define('TEXT_DOMAIN', 'wphierarchy');
+
     // Add theme supports
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -35,6 +37,11 @@ if (!function_exists('wphierarchy_setup')) :
     add_theme_support('custom-logo');
     add_theme_support('customize-selective-refresh-widgets');
     add_theme_support('starter-content');
+
+    // Register Menu Locations
+    register_nav_menus([
+      'main-menu' => esc_html__( 'Main Menu', 'wphierarchy' )
+    ]);
   }
 endif; // wphierarchy_setup
 add_action('after_setup_theme', 'wphierarchy_setup');
