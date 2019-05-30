@@ -7,7 +7,7 @@
   </header>
 
   <div class="byline">
-    <?php esc_html_e('筆者:'); ?> <?php the_author(); ?>
+    <?php esc_html_e('筆者:'); ?> <?php the_author_posts_link(); ?>
   </div>
 
   <div class="entry-content">
