@@ -10,11 +10,7 @@
   </header>
 
   <div class="entry-content">
-    <?php if( is_singular() ) : ?>
-      <p><?php the_content(); ?></p>
-    <?php else : ?>
-      <p><?php the_excerpt(); ?></p>
-    <?php endif; ?>
+    <p><?php the_content(); ?></p>
   </div>
 
   <?php if( comments_open() ) : ?>

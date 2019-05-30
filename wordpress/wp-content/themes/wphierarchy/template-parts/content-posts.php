@@ -3,7 +3,7 @@
   <span class="dashicons dashicons-format-<?php echo get_post_format( $post->ID ); ?>"></span>
 
   <header class="entry-header">
-    <h1><?php the_title(); ?></h1>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   </header>
 
   <div class="byline">
@@ -11,10 +11,6 @@
   </div>
 
   <div class="entry-content">
-    <p><?php the_content(); ?></p>
+    <p><?php the_excerpt(); ?></p>
   </div>
-
-  <?php if( comments_open() ) : ?>
-    <?php comments_template(); ?>
-  <?php endif; ?>
 </article>
