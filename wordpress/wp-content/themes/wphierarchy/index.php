@@ -15,7 +15,13 @@
         </div>
       </article>
       <?php endwhile; else : ?>
-        <p><?php esc_html_e('No Posts', TEXT_DOMAIN); ?></p>
+        <header class="entry-header">
+          <h1><?php esc_html_e('404', TEXT_DOMAIN); ?></h1>
+        </header>
+
+        <div class="entry-content">
+          <p><?php esc_html_e('コンテンツが見つかりませんでした。', TEXT_DOMAIN); ?></p>
+        </div>
       <?php endif; ?>
     </main>
   </div>
