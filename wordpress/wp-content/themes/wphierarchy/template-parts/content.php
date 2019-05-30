@@ -11,9 +11,13 @@
 
   <div class="entry-content">
     <?php if( is_singular() ) : ?>
-    <p><?php the_content(); ?></p>
+      <p><?php the_content(); ?></p>
     <?php else : ?>
       <p><?php the_excerpt(); ?></p>
     <?php endif; ?>
   </div>
+
+  <?php if( comments_open() ) : ?>
+    <?php comments_template(); ?>
+  <?php endif; ?>
 </article>
