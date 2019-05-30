@@ -20,4 +20,6 @@
     </main>
   </div>
 
-<?php get_footer('splash'); ?>
+  <?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

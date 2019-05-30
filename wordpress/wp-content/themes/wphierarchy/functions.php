@@ -37,11 +37,6 @@ if (!function_exists('wphierarchy_setup')) :
     add_theme_support('custom-logo');
     add_theme_support('customize-selective-refresh-widgets');
     add_theme_support('starter-content');
-
-    // Register Menu Locations
-    register_nav_menus([
-      'main-menu' => esc_html__( 'Main Menu', 'wphierarchy' )
-    ]);
   }
 endif; // wphierarchy_setup
 add_action('after_setup_theme', 'wphierarchy_setup');
@@ -61,3 +56,24 @@ function wphierarchy_styles()
 }
 
 add_action('wp_enqueue_scripts', 'wphierarchy_styles');
+
+
+// Register Menu Locations
+register_nav_menus([
+  'main-menu' => esc_html__( 'Main Menu', 'wphierarchy' )
+]);
+
+// Setup Widget area
+function wphierarchy_widgets_init()
+{
+  register_sidebar([
+    'name' => esc_html__('メインサイドバー', TEXT_DOMAIN),
+    'id' => 'main-sidebar',
+    'description' => esc_html__('main-sidebarにウィジェットを追加', TEXT_DOMAIN),
+    'before_widget' => '<section class="widget">',
+    'after_widget' => '</section>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ]);
+}
+add_action('widgets_init', 'wphierarchy_widgets_init');
