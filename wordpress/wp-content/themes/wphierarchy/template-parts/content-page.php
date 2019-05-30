@@ -5,10 +5,6 @@
     </h1>
   </header>
 
-  <div class="byline">
-    <?php esc_html_e('筆者:'); ?> <?php the_author(); ?>
-  </div>
-
   <div class="entry-content">
     <?php if( is_singular() ) : ?>
     <p><?php the_content(); ?></p>
