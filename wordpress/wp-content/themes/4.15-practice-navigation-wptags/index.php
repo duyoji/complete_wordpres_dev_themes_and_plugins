@@ -11,12 +11,18 @@
           <header class="entry-header">
 
             <?php the_title(); ?>
+            <?php the_shortlink('ショートリンク', 'タイトル', 'before', 'after'); ?>
+            <?php the_permalink(); ?>
 
           </header>
 
           <div class="entry-content">
 
             <?php the_content(); ?>
+            <?php wp_link_pages(); ?>
+            <pre>
+              <?php var_dump( get_post_meta( $post->ID ) ); ?>
+            </pre>
 
           </div>
 

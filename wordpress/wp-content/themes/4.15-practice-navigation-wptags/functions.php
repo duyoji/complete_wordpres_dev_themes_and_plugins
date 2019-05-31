@@ -66,5 +66,53 @@ function wptags_widgets_init() {
 }
 add_action( 'widgets_init', 'wptags_widgets_init' );
 
+/**
+ * ここから以下は削除しても問題ない
+ */
+
+// 管理画面（ビジュアルエディタ）にオリジナルのスタイルを適用
+// add_editor_style(array('style.css'));
+
+// 1段目に追加
+add_filter( 'mce_buttons', 'add_mce_buttons' );
+function add_mce_buttons( $buttons ) {
+  $add = array(
+    'wp_page'
+  );
+  return array_merge( $buttons, $add );
+}
+
+// 2段目に追加
+add_filter( 'mce_buttons_2', 'add_mce_buttons_2' );
+function add_mce_buttons_2( $buttons ) {
+  $add_buttons_2 = array(
+    'fontselect',
+    'fontsizeselect',
+    'backcolor'
+  );
+  return array_merge( $buttons, $add_buttons_2 );
+}
+
+// 3段目に追加
+add_filter( 'mce_buttons_3', 'add_mce_buttons_3' );
+function add_mce_buttons_3( $buttons ) {
+  $add_buttons_3 = array(
+    'cut',
+    'copy',
+    'paste'
+  );
+  return array_merge( $buttons, $add_buttons_3 );
+}
+
+// 4段目に追加
+add_filter( 'mce_buttons_4', 'add_mce_buttons_4' );
+function add_mce_buttons_4( $buttons ) {
+  $add_buttons_4 = array(
+    'superscript',
+    'subscript'
+  );
+  return array_merge( $buttons, $add_buttons_4 );
+}
+
 
 ?>
