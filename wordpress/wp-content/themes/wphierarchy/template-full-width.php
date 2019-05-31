@@ -1,6 +1,6 @@
 <?php
   // Template Name: 横幅いっぱい
-  // Template Post Type: post, page
+  // Template Post Type: post, page, portfolio
 ?>
 <?php get_header(); ?>
 

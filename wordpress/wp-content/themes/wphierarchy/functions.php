@@ -43,7 +43,6 @@ add_action('after_setup_theme', 'wphierarchy_setup');
 
 
 // Load our CSS
-
 function wphierarchy_styles()
 {
   wp_enqueue_style(
@@ -54,8 +53,20 @@ function wphierarchy_styles()
     'all'
   );
 }
-
 add_action('wp_enqueue_scripts', 'wphierarchy_styles');
+
+// Load our JS
+function wphierarchy_scripts()
+{
+  wp_enqueue_script(
+    'main-js',
+    get_stylesheet_directory_uri() . '/assets/js/main.js',
+    ['jquery'],
+    time(),
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'wphierarchy_scripts');
 
 
 // Register Menu Locations
