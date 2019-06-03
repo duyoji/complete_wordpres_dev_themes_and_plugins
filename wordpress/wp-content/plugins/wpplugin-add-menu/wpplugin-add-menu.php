@@ -17,9 +17,10 @@ if ( !defined('WPINC') ) {
   die;
 }
 
-/**
- * Register a custom menu page.
- */
+require_once( __DIR__ . '/sub-pages/sub-content1.php' );
+// use wpplugin_add_menu\sub_pages\sub_content1 as Sub_Contents1;
+
+
 function wpdocs_register_my_custom_menu_page(){
   add_menu_page(
     __( 'カスタムメニュータイトル', 'wpplugin' ),
@@ -29,8 +30,19 @@ function wpdocs_register_my_custom_menu_page(){
     'my_custom_menu_page',
     'dashicons-admin-site-alt3'
   );
+
+  add_submenu_page(
+    'wpplugin-slug',
+    'カスタムサブタイトル',
+    'カスタムサブメニュー',
+    'manage_options',
+    'wpplugin-slug-child',
+    'wpplugin_add_menu\sub_pages\sub_content1\my_custom_submenu_page'
+  );
+
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
+
 
 function my_custom_menu_page()
 {
@@ -47,5 +59,3 @@ function my_custom_menu_page()
 
   <?php
 }
-
-?>
