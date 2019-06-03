@@ -15,7 +15,8 @@
       </a>
 
       <header id="masthead" class="site-header" role="banner">
-
+        <?php echo home_url(); ?> @@@@@1
+        <?php echo site_url(); ?> @@@@@2
         <div class="site-branding">
           <p class="site-title">
             <a href="<?php echo esc_url( home_url() ) ;?>" rel="home">

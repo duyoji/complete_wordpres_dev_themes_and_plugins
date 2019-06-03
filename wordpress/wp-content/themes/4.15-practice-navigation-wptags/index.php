@@ -13,6 +13,7 @@
             <?php the_title(); ?>
             <?php the_shortlink('ショートリンク', 'タイトル', 'before', 'after'); ?>
             <?php the_permalink(); ?>
+            <?php edit_post_link( '編集', '<b>', '</b>'); ?>
 
           </header>
 
