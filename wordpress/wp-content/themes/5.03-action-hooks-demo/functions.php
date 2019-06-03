@@ -8,6 +8,9 @@ add_theme_support( 'html5' );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'customize-selective-refresh-widgets' );
 
+// Include R Debug
+require_once( dirname( __FILE__ ) . '/lib/r-debug.php' );
+
 // Load in our CSS
 function wptags_enqueue_styles() {
 

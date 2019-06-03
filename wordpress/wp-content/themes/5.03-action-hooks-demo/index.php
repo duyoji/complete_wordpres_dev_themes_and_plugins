@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <pre><?php var_dump( $wp_filter['wp_enqueue_scripts']->callbacks['10'] ); ?></pre>
+  <?php R_Debug::list_hooks( 'wp_enqueue_scripts' ); ?>
 
   <div id="primary" class="content-area">
 
