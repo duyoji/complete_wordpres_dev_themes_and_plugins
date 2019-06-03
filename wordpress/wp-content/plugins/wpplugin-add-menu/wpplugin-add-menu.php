@@ -66,7 +66,6 @@ function wpplugin_add_settings_link( $links )
   $url = admin_url( 'admin.php?page=wpplugin-slug' );
   $url = '<a href="' . esc_url( $url ) . '">' . __( 'Settings', 'wpplugin' ) . '</a>';
   $links['setting'] = $url;
-  var_dump( $links );
 
   return $links;
 }
