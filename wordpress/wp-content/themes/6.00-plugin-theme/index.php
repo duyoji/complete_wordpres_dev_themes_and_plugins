@@ -4,8 +4,6 @@
 
     <main id="main" class="site-main" role="main">
 
-      <?php get_template_part( 'template-parts/author', 'bio' ); ?>
-
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -29,7 +27,7 @@
             <?php endif; ?>
 
             <h2>
-              <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>">
                 <?php the_title(); ?>
               </a>
             </h2>

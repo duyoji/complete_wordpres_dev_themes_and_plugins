@@ -8,13 +8,13 @@
 
     <p>
       <a class="button" href="<?php echo wp_logout_url( get_the_permalink() ); ?>">
-        <?php _e( 'Logout', 'wptags' ) ?>
+        <?php _e( 'Logout', 'wphooks' ) ?>
       </a>
     </p>
 
   <?php endif; ?>
 
-  <h3><?php _e( 'Site Authors', 'wptags' ); ?></h3>
+  <h3><?php _e( 'Site Authors', 'wphooks' ); ?></h3>
   <?php wp_list_authors(); ?>
 
   <?php dynamic_sidebar( 'main-sidebar' ); ?>

@@ -26,7 +26,7 @@
     <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wptags' ) ); ?>">
       <?php printf( esc_html__( 'Proudly powered by %s', 'wptags' ), 'WordPress' ); ?>
     </a>
-
+    
   </footer>
 
 </div><!-- #page -->

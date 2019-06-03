@@ -1,12 +1,12 @@
 /*
-Theme Name: 4.44 - Localization Tags (DEMO)
+Theme Name: 6 - Plugin Theme
 Author: Zac Gordon
 Author URI: http://zacgordon.com
 Description: Demo theme for Zac Gordon's WordPress Development Course.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: wptags
+Text Domain: wpplugins
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -14,7 +14,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 body {
-  background-color: #feca5c;
+  background-color: #68C6E6;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -41,7 +41,7 @@ h2.search-title {
 }
 
 a {
-  color: #494329;
+  color: #020102;
 }
 
 .site-header a {
@@ -73,6 +73,11 @@ ul {
   margin: 0 0 1rem 0;
 }
 
+.before-footer {
+  width: 100%;
+  clear: both;
+}
+
 #masthead,
 footer.site-footer {
   margin: 2rem auto 1rem;
@@ -101,7 +106,7 @@ footer.site-footer {
 .main-navigation li.current-menu-item>a,
 .main-navigation li.current-page-parent>a {
   font-weight: bold;
-  color: #494329;
+  color: #020102;
 }
 
 .main-navigation li ul {
@@ -113,7 +118,7 @@ footer.site-footer {
   position: absolute;
   margin-left: -10px;
   z-index: 100;
-  background: #feca5c;
+  background: #68C6E6;
   padding: 5px 10px;
 }
 
@@ -260,6 +265,16 @@ article.post {
   float: left;
 }
 
+.post-ad {
+  background: #68C6E6;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.post-ad h2 {
+  margin: 0;
+}
 
 /*--------------------------------------------------------------
 # Default WP Classes
@@ -328,9 +343,21 @@ blockquote.right {
 .size-thumbnail {}
 
 
+
+
   /**
    * 11.4 - Comments
    */
+
+   .comment-cta {
+     background: #68C6E6;
+     color: #fff;
+     padding: 20px;
+     text-align: center;
+   }
+   .comment-cta h2 {
+     margin: 0;
+   }
 
   .comments-area {
   	margin: 3rem 0 3.5em;

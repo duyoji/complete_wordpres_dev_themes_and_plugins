@@ -11,7 +11,7 @@
   <?php if( current_user_can( 'edit_users' ) ): ?>
     <p>
       <a href="<?php echo get_edit_user_link( get_the_author_meta( 'ID' ) ); ?>">
-        <?php _e( 'Edit User', 'wptags' ); ?>
+        <?php _e( 'Edit User', 'wphooks' ); ?>
       </a>
     </p>
   <?php endif; ?>
